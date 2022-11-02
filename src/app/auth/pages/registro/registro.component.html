@@ -1,0 +1,46 @@
+<h3>Registrar USuario</h3>
+<form autocomplete="off"
+    [formGroup]="miFormulario"
+    (ngSubmit)="crearUsuario()">
+    <div class="row mt-2">
+        <div class="col-md-6">
+            <label for="">Nombre</label>
+            <input type="text" 
+                class="form-control"
+                formControlName="name">
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-6">
+            <label for="">Email</label>
+            <input type="text" 
+                class="form-control"
+                formControlName="email">
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-6">
+            <label for="">Password</label>
+            <input type="text" 
+                class="form-control"
+                formControlName="password">
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-6">
+            <button class="btn btn-success w- 100"
+                type="submit"
+                [disabled]="miFormulario.invalid">
+                Crear Usuario
+            </button>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-6">
+            <a routerLink="/auth/login"
+                class="btn btn-info">
+                Ir a Login
+            </a>
+        </div>
+    </div>
+</form>
